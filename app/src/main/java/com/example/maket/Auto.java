@@ -8,6 +8,7 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -15,13 +16,14 @@ import com.google.android.material.textfield.TextInputEditText;
 
 public class Auto extends AppCompatActivity{
 
-
+private CheckBox checkBox;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.auto);
-
+         checkBox=this.findViewById(R.id.checkBox);
     }
+
 
 
     public void Register(View v){
