@@ -15,4 +15,11 @@ public class Register extends AppCompatActivity {
         setContentView(R.layout.regis);
 
     }
+    public void Login (View v){
+        startActivity(new Intent(this,Auto.class));
+    }
+
+    public void Regist(View v){
+        startActivity(new Intent(this,LogIn.class));
+    }
 }

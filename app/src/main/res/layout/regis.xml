@@ -5,19 +5,35 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-
-
-    <TextView
-        android:id="@+id/Zag"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="29sp"
-        android:layout_marginTop="40sp"
-        android:text="Register"
-        android:textColor="@color/zagolovok"
-        android:textSize="40sp"
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/Zag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="29sp"
+                android:layout_marginTop="40sp"
+                android:layout_marginBottom="15dp"
+                android:text="Register"
+                android:textColor="@color/zagolovok"
+                android:textSize="40sp"
+                app:layout_constraintBottom_toTopOf="@+id/full_name"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/full_name"
@@ -35,22 +51,22 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Zag" />
 
-    <EditText
-        android:id="@+id/edit_login"
-        android:layout_width="359sp"
-        android:layout_height="55sp"
-        android:layout_marginTop="20sp"
-        android:layout_marginBottom="17dp"
-        android:background="@drawable/krugl"
-        android:hint="Enter Email / Phone Number"
-        android:inputType="textEmailAddress"
-        android:paddingLeft="26sp"
-        android:textColorHint="@color/osntext"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toTopOf="@+id/edit_password"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/full_name" />
+            <EditText
+                android:id="@+id/edit_login"
+                android:layout_width="359sp"
+                android:layout_height="55sp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="17dp"
+                android:background="@drawable/krugl"
+                android:hint="Enter Email / Phone Number"
+                android:inputType="textEmailAddress"
+                android:paddingLeft="26sp"
+                android:textColorHint="@color/osntext"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toTopOf="@+id/edit_password"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/full_name" />
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/edit_password"
         android:layout_width="359sp"
@@ -105,11 +121,14 @@
         android:layout_height="34sp"
         android:layout_marginStart="31sp"
         android:layout_marginTop="20sp"
-        android:button="@null"
         android:background="@drawable/check"
+
+        android:buttonTint="#C3EDDF"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/confirm_password"
-        tools:ignore="TouchTargetSizeCheck" />
+        app:layout_constraintTop_toBottomOf="@+id/confirm_password" />
+
+
+
 
     <TextView
         android:layout_width="wrap_content"
@@ -129,7 +148,7 @@
         android:layout_marginTop="25dp"
         android:layout_marginBottom="23dp"
         android:background="@drawable/krugl"
-        android:onClick="Register"
+        android:onClick="Regist"
         android:text="Register"
         android:textAllCaps="false"
         android:textColor="@color/osntext"
@@ -177,22 +196,23 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:autoLink="web"
-        android:clickable="true"
-        android:onClick="Login"
-        android:text="Log in"
-        android:textColor="@color/osntext"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/gog"
-        tools:ignore="TouchTargetSizeCheck" />
-
-
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="15dp"
+                android:autoLink="web"
+                android:clickable="true"
+                android:onClick="Login"
+                android:text="Log in"
+                android:textColor="@color/osntext"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/gog"
+                tools:ignore="TouchTargetSizeCheck" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

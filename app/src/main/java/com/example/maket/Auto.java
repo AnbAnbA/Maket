@@ -25,6 +25,10 @@ private CheckBox checkBox;
     }
 
 
+    public void Log(View v){
+        Intent reg = new Intent(this,LogIn.class);
+        startActivity(reg);
+    }
 
     public void Register(View v){
         Intent reg = new Intent(Auto.this,Register.class);
